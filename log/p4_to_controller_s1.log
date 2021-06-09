@@ -1,0 +1,25 @@
+2021-06-07 02:42:16,503 | [1;44mINFO[1;0m | {u'h2': 0, u's2': 3, u's1': 4, u'h1': 1, u's5': 5, u's4': 6, u's3': 2}
+2021-06-07 02:42:16,503 | [1;44mINFO[1;0m | table add send set_nh 6 => 4 42:e1:7c:95:d6:3a fa:89:f9:0b:a8:cb
+2021-06-07 02:42:16,504 | [1;44mINFO[1;0m | table add send set_nh 1 => 1 00:01:0a:00:01:01 00:00:0a:00:01:01
+2021-06-07 02:42:16,504 | [1;44mINFO[1;0m | table add send set_nh 2 => 3 9a:c1:53:3e:3f:32 86:0d:4a:55:d9:e5
+2021-06-07 02:42:16,504 | [1;44mINFO[1;0m | table add send set_nh 3 => 2 72:5b:52:97:ef:1c 7e:75:5e:10:a5:4e
+2021-06-07 02:42:16,505 | [1;44mINFO[1;0m | do_register_write switch_ip 0 3368601601
+2021-06-07 02:42:16,505 | [1;44mINFO[1;0m | do_register_write threshold_registers 0 15
+2021-06-07 02:42:16,505 | [1;44mINFO[1;0m | do_register_write threshold_registers 1 15
+2021-06-07 02:42:16,506 | [1;44mINFO[1;0m | do_register_write threshold_registers 2 15
+2021-06-07 02:42:16,506 | [1;44mINFO[1;0m | do_register_write threshold_registers 3 15
+2021-06-07 02:42:16,506 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.5.2/24 0 => 0 1 3
+2021-06-07 02:42:16,507 | [1;44mINFO[1;0m | do_register_write next_hops_port 0 3
+2021-06-07 02:42:16,507 | [1;44mINFO[1;0m | do_register_write next_hops_port 1 2
+2021-06-07 02:42:16,507 | [1;44mINFO[1;0m | do_register_write next_hops_port 2 6
+2021-06-07 02:42:16,507 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.5.2/24 1 => 1 1 3
+2021-06-07 02:42:16,508 | [1;44mINFO[1;0m | do_register_write next_hops_port 3 3
+2021-06-07 02:42:16,508 | [1;44mINFO[1;0m | do_register_write next_hops_port 4 2
+2021-06-07 02:42:16,509 | [1;44mINFO[1;0m | do_register_write next_hops_port 5 6
+2021-06-07 02:42:16,509 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.1.1/24 0 => 2 0 1
+2021-06-07 02:42:16,510 | [1;44mINFO[1;0m | do_register_write next_hops_port 6 1
+2021-06-07 02:42:16,510 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.1.1/24 1 => 3 0 1
+2021-06-07 02:42:16,511 | [1;44mINFO[1;0m | do_register_write next_hops_port 9 1
+2021-06-07 02:42:16,511 | [1;44mINFO[1;0m | bgp_tag set_bgp_tag 4 fa:89:f9:0b:a8:cb => 0
+2021-06-07 02:42:16,512 | [1;44mINFO[1;0m | bgp_tag set_bgp_tag 3 86:0d:4a:55:d9:e5 => 0
+2021-06-07 02:42:16,513 | [1;44mINFO[1;0m | bgp_tag set_bgp_tag 2 7e:75:5e:10:a5:4e => 0

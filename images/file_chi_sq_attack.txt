@@ -1,0 +1,48 @@
+Attack Start,Attack End -- [6.5,12.25]
+
+Eq class-- > 11
+The window Number0 233.834550701
+The window Number1 5.18741552199
+The window Number2 4.95684153254
+The window Number3 5.07631615108
+The window Number4 5.15888960988
+The window Number5 5.17055202519
+The window Number6 4.75876690925
+The window Number7 4.87835577181
+The window Number8 63.6052036741
+The window Number9 19026.2867378
+The window Number10 15044.3363768
+The window Number11 5851.53203522
+The window Number12 8979.82420382
+The window Number13 10469.959319
+The window Number14 4965.14140127
+The window Number15 5017.12047151
+The window Number16 6825.31349569
+The window Number17 6837.78252381
+The window Number18 3172.31052655
+The window Number19 31.7688808007
+The window number0 49319.7706845
+
+Eq Class-- 19
+
+The window number1 6607.35105806
+The window number2 5847.76802793
+The window number3 6311.82767361
+The window number4 6486.33478025
+The window number5 6540.34563212
+The window number6 5509.2371134
+The window number7 5845.76260659
+The window number8 6096.93722077
+The window number9 5553.93288684
+The window number10 1404.93554695
+The window number11 1006.89975849
+The window number12 1583.62581464
+The window number13 1972.9422795
+The window number14 6.28853077979
+The window number15 6.25301953691
+The window number16 6.05001888707
+The window number17 5.96936239157
+The window number18 787.551993117
+The window number19 627.45125044
+
+

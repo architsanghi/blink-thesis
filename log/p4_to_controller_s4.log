@@ -1,0 +1,18 @@
+2021-06-07 02:42:16,518 | [1;44mINFO[1;0m | {u'h2': 0, u's2': 3, u's1': 4, u'h1': 1, u's5': 5, u's4': 6, u's3': 2}
+2021-06-07 02:42:16,518 | [1;44mINFO[1;0m | table add send set_nh 5 => 2 3e:37:4a:4e:5e:88 ae:d8:56:7e:4d:b0
+2021-06-07 02:42:16,519 | [1;44mINFO[1;0m | table add send set_nh 4 => 1 fa:89:f9:0b:a8:cb 42:e1:7c:95:d6:3a
+2021-06-07 02:42:16,520 | [1;44mINFO[1;0m | do_register_write switch_ip 0 3368601604
+2021-06-07 02:42:16,520 | [1;44mINFO[1;0m | do_register_write threshold_registers 0 15
+2021-06-07 02:42:16,520 | [1;44mINFO[1;0m | do_register_write threshold_registers 1 15
+2021-06-07 02:42:16,520 | [1;44mINFO[1;0m | do_register_write threshold_registers 2 15
+2021-06-07 02:42:16,521 | [1;44mINFO[1;0m | do_register_write threshold_registers 3 15
+2021-06-07 02:42:16,521 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.5.2/24 0 => 0 0 5
+2021-06-07 02:42:16,522 | [1;44mINFO[1;0m | do_register_write next_hops_port 0 5
+2021-06-07 02:42:16,522 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.5.2/24 1 => 1 0 5
+2021-06-07 02:42:16,522 | [1;44mINFO[1;0m | do_register_write next_hops_port 3 5
+2021-06-07 02:42:16,523 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.1.1/24 0 => 2 0 4
+2021-06-07 02:42:16,524 | [1;44mINFO[1;0m | do_register_write next_hops_port 6 4
+2021-06-07 02:42:16,524 | [1;44mINFO[1;0m | meta_fwtable set_meta 10.0.1.1/24 1 => 3 0 4
+2021-06-07 02:42:16,524 | [1;44mINFO[1;0m | do_register_write next_hops_port 9 4
+2021-06-07 02:42:16,525 | [1;44mINFO[1;0m | bgp_tag set_bgp_tag 2 ae:d8:56:7e:4d:b0 => 0
+2021-06-07 02:42:16,525 | [1;44mINFO[1;0m | bgp_tag set_bgp_tag 1 42:e1:7c:95:d6:3a => 1

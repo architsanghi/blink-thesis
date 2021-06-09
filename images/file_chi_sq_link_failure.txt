@@ -1,0 +1,53 @@
+Eq-Class14
+The window Number0 193.364296099
+The window Number1 5.20979697089
+The window Number2 5.05166770499
+The window Number3 5.20781210571
+The window Number4 4.68312793737
+The window Number5 5.1592520395
+The window Number6 4.98768314378
+The window Number7 5.06576168907
+The window Number8 4.68926953739
+The window Number9 2790.03301086
+The window Number10 5999.70615354
+The window Number11 5758.69088966
+The window Number12 8709.9454692
+The window Number13 6701.7876233
+The window Number14 8457.98265467
+The window Number15 14441.7614095
+The window Number16 7453.83344131
+The window Number17 6455.73625408
+The window Number18 416.315582113
+
+
+Eq Class- ->16
+The window number0 61520.6360225
+The window number1 6674.86562632
+The window number2 6284.82225193
+The window number3 6567.35105806
+The window number4 5397.71381632
+The window number5 6473.84936067
+The window number6 6128.2967987
+The window number7 6220.80597842
+The window number8 5362.22083559
+The window number9 492.562162147
+The window number10 5.6777181679
+The window number11 5.47066383436
+The window number12 6.72308666007
+The window number13 5.9303807172
+The window number14 6.98591523122
+The window number15 862.702098238
+The window number16 6.2168876056
+The window number17 2.4714122226
+The window number18 2101.43123472
+
+
+
+
+
+
+
+
+
+
+

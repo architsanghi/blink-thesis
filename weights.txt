@@ -1,0 +1,110 @@
+{'src': u'node_25', 'dst': u'tbl_sliding_window51', 'weight': 489888}
+x
+{'src': u'node_42', 'dst': u'node_47', 'weight': 12096}
+x
+{'src': u'node_93', 'dst': u'tbl_main261', 'weight': 4}
+x
+{'src': u'node_113', 'dst': u'node_115', 'weight': 2}
+x
+{'src': u'node_49', 'dst': u'tbl_sliding_window124', 'weight': 2016}
+x
+{'src': u'node_71', 'dst': u'tbl_flowselector174', 'weight': 168}
+x
+{'src': u'node_92', 'dst': u'node_93', 'weight': 10}
+x
+{'src': u'node_54', 'dst': u'tbl_sliding_window139', 'weight': 672}
+x
+{'src': u'node_15', 'dst': u'tbl_sliding_window11', 'weight': 28}
+x
+{'src': u'node_81', 'dst': u'tbl_flowselector214', 'weight': 112}
+x
+{'src': u'node_66', 'dst': u'node_71', 'weight': 112}
+x
+{'src': u'ingress.bgp_tag', 'dst': u'ingress.set_bgp_tag', 'weight': 7843754}
+{'src': u'node_12', 'dst': u'tbl_main219', 'weight': 1960924}
+x
+{'src': u'node_74', 'dst': u'tbl_flowselector160', 'weight': 56}
+x
+{'src': u'node_115', 'dst': u'tbl_main344', 'weight': 4}
+x
+{'src': u'node_117', 'dst': u'tbl_main353', 'weight': 2}
+x
+{'src': u'node_23', 'dst': u'tbl_sliding_window47', 'weight': 653184}
+x
+{'src': u'node_8', 'dst': u'tbl_main173', 'weight': 3921876}
+x
+{'src': u'node_105', 'dst': u'node_120', 'weight': 4}
+x
+{'src': u'node_11', 'dst': u'node_89', 'weight': 3921848}
+x
+{'src': u'node_47', 'dst': u'tbl_sliding_window120', 'weight': 2016}
+x
+{'src': u'node_52', 'dst': u'tbl_sliding_window149', 'weight': 1344}
+x
+{'src': u'node_59', 'dst': u'tbl_flowselector68', 'weight': 224}
+x
+{'src': u'node_20', 'dst': u'node_21', 'weight': 672}
+x
+{'src': u'node_27', 'dst': u'node_29', 'weight': 163296}
+x
+{'src': u'node_34', 'dst': u'tbl_sliding_window74', 'weight': 54432}
+x
+{'src': u'node_122', 'dst': u'tbl_main367', 'weight': 1}
+x
+{'src': u'node_3', 'dst': u'tbl_main157', 'weight': 15687509}
+x
+{'src': u'node_63', 'dst': u'tbl_flowselector97', 'weight': 56}
+x
+{'src': u'node_32', 'dst': u'tbl_sliding_window69', 'weight': 54432}
+x
+{'src': u'node_79', 'dst': u'tbl_main224', 'weight': 168}
+x
+{'src': u'node_100', 'dst': u'tbl_main289', 'weight': 2}
+x
+{'src': u'node_44', 'dst': u'tbl_sliding_window109', 'weight': 6048}
+x
+{'src': u'node_107', 'dst': u'tbl_main315', 'weight': 2}
+x
+{'src': u'node_73', 'dst': u'tbl_flowselector170', 'weight': 112}
+x
+{'src': u'node_68', 'dst': u'tbl_flowselector124', 'weight': 56}
+x
+{'src': u'node_91', 'dst': u'node_92', 'weight': 8}
+x
+{'src': u'node_110', 'dst': u'tbl_main329', 'weight': 2}
+x
+{'src': u'node_37', 'dst': u'tbl_sliding_window90', 'weight': 18144}
+x
+{'src': u'ingress.meta_fwtable', 'dst': u'ingress._drop', 'weight': 3921877}
+{'src': u'node_97', 'dst': u'tbl_main276', 'weight': 2}
+x
+{'src': u'node_21', 'dst': u'node_23', 'weight': 163296}
+x
+{'src': u'node_103', 'dst': u'tbl_main300', 'weight': 4}
+x
+{'src': u'node_87', 'dst': u'node_89', 'weight': 28}
+x
+{'src': u'node_17', 'dst': u'tbl_sliding_window31', 'weight': 980448}
+x
+{'src': u'node_95', 'dst': u'node_120', 'weight': 4}
+x
+{'src': u'node_29', 'dst': u'tbl_sliding_window63', 'weight': 163296}
+x
+{'src': u'node_39', 'dst': u'tbl_sliding_window94', 'weight': 18144}
+x
+{'src': u'node_83', 'dst': u'tbl_flowselector214', 'weight': 56}
+x
+{'src': u'node_61', 'dst': u'tbl_flowselector73', 'weight': 336}
+x
+{'src': u'ingress.bgp_tag', 'dst': u'NoAction', 'weight': 15687508}
+
+
+
+
+
+
+{'src': u'ingress.bgp_tag', 'dst': u'NoAction', 'weight': 15687508}
+{'src': u'ingress.bgp_tag', 'dst': u'ingress.set_bgp_tag', 'weight': 7843754}
+{'src': u'ingress.meta_fwtable', 'dst': u'ingress._drop', 'weight': 3921877}
+
+

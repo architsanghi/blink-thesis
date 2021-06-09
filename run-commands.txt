@@ -1,0 +1,40 @@
+sudo p4run
+
+sudo python -m controller.blink_controller --port 10000 --log_dir log --log_level 20 --routing_file topologies/5switches_routing.json --threshold 15 --topo_db topology.db
+
+python -m controller.run_p4_controllers --topo_db topology.db --controller_ip localhost --controller_port 10000 --routing_file topologies/5switches_routing.json
+
+
+mx h2
+python -m traffic_generation.run_servers --ports 11000,11040 --log_dir log_traffic```
+python -m traffic_generation.run_servers --ports 11000,11040 --log_dir log_traffic```
+
+python -m traffic_generation.run_servers --ports 11000,11025 --log_dir log_traffic```
+python -m traffic_generation.run_servers --ports 11000,11025 --log_dir log_traffic```
+
+sudo ifconfig s1-eth2 down
+
+speedometer -t s1-eth2
+speedometer -t s1-eth3
+mx h1
+python -m traffic_generation.run_clients --dst_ip 10.0.5.2 --src_ports 11000,11040 --dst_ports 11000,11040 --ipd 1 --duration 125 --log_dir log_traffic/
+
+
+python -m traffic_generation.run_clients --dst_ip 10.0.5.2 --src_ports 11000,11025 --dst_ports 11000,11025 --ipd 1 --duration 125 --log_dir log_traffic/
+
+
+cat s1.log | grep "* custom_metadata.bl_value" > s1-out1.log
+
+python bl.py
+
+
+ tc qdisc add dev s1-eth2 root netem duplicate 35%
+ tc qdisc del dev s1-eth2 root netem duplicate 35%
+
+
+
+
+sudo kill -9 $(ps -A | grep python | awk '{print $1}')
+sudo pkill python
+ps -fA | grep python
+kill 2nd process id
