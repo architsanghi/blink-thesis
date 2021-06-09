@@ -70,12 +70,7 @@ def extract_nodename_condition(filename):
             if 'source_info' in condition.keys():
                 node_to_condition_map[condition['name']] = condition['source_info']['source_fragment']
     
-    #     for table in name["tables"]:
-    #         if "ingress" not in table["name"]:
-    #             node_to_condition_map[table["name"]]= table['source_info']['source_fragment']
-    # print("condition map starting")
-    # print(node_to_condition_map['tbl_main209'])
-    # print("condition map ending")
+  
     return node_to_condition_map
 
 def extract_tables_next_actions(filename):
@@ -224,83 +219,13 @@ def create_edges(filename):
 
     """Replace Node name in the edges with exact P4 code snippet."""
     # print("total edges before are",len(edges))
-    for e in edges:
-        if e['src']=='tbl_main157' or e['dst']=='tbl_main370':
-            print("case1",e['src'],e['dst'])
-        # if e['src'] in nodename_condition.keys():
-        #     print(e['src'])
-        #     e['src'] = nodename_condition[e['src']]
-        #     print(e['src'])
-        
-        # if e['dst'] in nodename_condition.keys():
-        #     print(e['src'],e['dst'])
-        #     e['dst'] = nodename_condition[e['dst']]
-        #     print(e['src'],e['dst'])
-
-        
-        # Remove the edges with such nodes which has next actions as 'None'.
-
-        # if e['dst'] in table_next_actions.keys() and 'ingress' not in e['dst']:
-        #     for key in table_next_actions[e['dst']].keys():
-        #         if all(x is None for x in table_next_actions[e['dst']].values()):
-        #             print(e)
-        #             edges.remove(e)
-
-        # If the 'dst' of edge has a Custom table created by compiler(i.e. starts with 'tbl_'), then replace it with the MyIngress Table.
-        
-        # if 'tbl_' in e['dst']:
-        #     keys, dst = get_notNone_values(table_next_actions[e['dst']])
-        #     if len(dst) != 0:
-        #         for d in dst:
-        #             if d != 'null' and d != 'Null' and d != "None":
-        #                 e['dst'] = d
-        #             else:
-        #                 print("why are you removing")
-        #                 edges.remove(e)
-
-        # If the 'src' of edge has a Custom table created by compiler(i.e. starts with 'tbl_'), then replace it with the MyIngress Table.
-        
-        # if 'tbl_' in e['src']:
-        #     keys, src = get_notNone_values(table_next_actions[e['src']])
-        #     if len(src) != 0:
-        #         for s in src: 
-        #             print("before",e['src'])
-        #             e['src'] = s  
-        #             print("after",e['src'])
-        
-        # Remove the edges with source and destination nodes as Table.
-        # if ((e['src'] in table_actions.keys() or e['src'] in table_next_actions.keys()) and (e['dst'] in table_actions.keys() or e['dst'] in table_next_actions.keys())):
-        #     print("check this out")
-        #     edges.remove(e)
 
     #Remove such elements with similar 'src' and 'dst'
     for e in edges:    
         if e['src'] == e['dst']:
             # print("\n\t@@@@ BEFORE: ",edges)
-            print("going inside")
             edges.remove(e)
             # print("\n\t@@@@ AFTER: ",edges)
-
-    # for e in edges:
-    #     if e['src'] in nodename_condition.keys():
-    #         e['src'] = nodename_condition[e['src']]
-        
-    #     if e['dst'] in nodename_condition.keys():
-    #         e['dst'] = nodename_condition[e['dst']]
-    
-    # Remove such tables created by compiler with destination = "None"
-
-    # for e in edges:s
-    #     if "tbl_" in e['dst']:
-    #         for k in table_next_actions[e['dst']].keys():
-    #             if table_next_actions[e['dst']][k] == None:
-    #                 print("entering2",e)
-    #                 edges.remove(e)
-
-    # for e in edges:
-    #     if e['src']=='custom_metadata.use_blink == 1w1' and e['dst']=='ingress.send':
-    #         print("hardcode",e['dst'])
-    #         edges.remove(e)
     print("total edges after are",len(edges))
     return edges
 
@@ -328,22 +253,7 @@ def create_cfg(filename):
     """Remove such elements with similar 'src' and 'dst'."""
     for e in edge_list:
         if e[0] == e[1]:
-            print("check this out")
             edge_list.remove(e)
-
-    # print("total number of edges are ")
-    # print(len(edge_list))
-
-    """Remove Such edges in which source and destination nodes are conditionals"""
-    # conditionals_nextstep = extract_conditionals(filename)
-    # count=0
-    # for e in edge_list:
-    #     if e[0] in conditionals_nextstep.keys() and e[1] in conditionals_nextstep.keys():
-    #         edge_list.remove(e)
-
-    #Create Nodes using the extracted edges to prevent adding unwanted nodes.
-    # print("start printing edges")
-
 
     for e in edge_list:
         nodes.append(e[0])
@@ -351,8 +261,8 @@ def create_cfg(filename):
     # print("end printing edges")
     nodes = list(set(nodes))
 
-    print("Total Nodes/states in graph are")
-    print(len(nodes))
+    print("Total Nodes/states in graph are", len(nodes))
+    
 
     G = nx.DiGraph()
     G.add_nodes_from(nodes)
@@ -378,121 +288,35 @@ def create_cfg(filename):
     # cycle = nx.find_cycle(G)
     # print("\n\t cycle: ",cycle)
 
-    print("total number of edges are")
-    print(edge_list)
-    print(len(edge_list))
+    # print("total number of edges are", len(edge_list))
+ 
 
 
     
     topological_order = list(nx.topological_sort(G))
     rev_topological_order = list(reversed(list(nx.topological_sort(G))))
 
-    print(topological_order)
-    print(len(topological_order))
+    # print(topological_order)
+    # print(len(topological_order))
     
 
     # print(topological_order)
     leaf_vertex = [v for v, d in G.out_degree() if d == 0]
     start_vertex = [v for v, d in G.in_degree() if d==0]
 
-    print(leaf_vertex)
+    print("leaf vertices are", leaf_vertex)
 
     print("\n")
     print("\n")
+
+    print("start vertex is",start_vertex)
+
     print("\n")
-
-    print(start_vertex)
-
-
-    # print(leaf_vertex)
-    
-    # for i in leaf_vertex:
-    #     print(i,G.out_degree(i))
-
-    # print("number of leaf vertices in control flow graph are")
-    # print(len(leaf_vertex))
-    
-
-    # for i in start_vertex:
-    #     if i=='main149':
-    #         print("yes")
-   
-    # print(list(nx.bfs_edges(G,source='flowselector153')))
-    # print(G.in_degree(nodes))
-    
-
-    # for i in nodes:
-    #     if i=='flowselector153':
-    #         print("this should be sources")
-    
-    # path_list = []    
-    # print("entering1")
-    # counter=0
-    # for leaf in leaf_vertex:
-    #     for path in nx.all_simple_paths(G, source='tbl_main150', target='node_125'):
-    #         counter=counter+1
-    #         print(counter)
-    #         path_list.append(path)
-    # print("entering2")
-
-    # print("Number of paths in the program are",len(path_list))
-
+    print("\n")
 
 
     path_list = []    
-    print("entering1")
 
-
-    # print(G.edges())
-    # print(len(G.edges))
-
-    # print(list(nx.bfs_edges(G,source='tbl_main150')))
-    # print(len(list(nx.bfs_edges(G,source='tbl_main150'))))
-
-    # print(list(nx.bfs_predecessors(G,source='tbl_main150')))
-    # print(len(list(nx.bfs_predecessors(G,source='tbl_main150'))))
-    
-    # counter=0
-    # myf=open("paths.txt","a")
-    # for leaf in leaf_vertex:
-    #     for path in nx.all_simple_paths(G, source='tbl_main150', target=leaf):
-    #         print(counter)
-    #         counter=counter+1
-    #         path_list.append(path)
-    #         myf.write(str(path)+"\n"+"\n")
-    # print(counter)
-
-    # print("entering")
-    # counter1=0
-    # for path in nx.all_simple_paths(G, source='tbl_main150', target='tbl_main370'):
-        # myf.write(str(path)+"\n"+"\n")
-        # path_list.append(path)
-        # print(counter1)
-        # counter1= counter1+1
-
-
-    # counter2=0
-    # for path in nx.all_simple_paths(G, source='tbl_main150', target='NoAction'):
-    #     print(counter2)
-    #     counter2= counter2+1
-
-    # print("TBL_MAIN173", counter1)
-    # print("NoACtion", counter2)
-        
-            
-    # print(counter)
-    # print("entering2")
-
-    # print("Number of paths in the program are",len(counter))
-
-    # print("Number of leaf nodes in the graph are",len(leaf_vertex))
-    
-
-    # print("NUMBER OF LEAVES ARE")
-    # print(len(leaf_vertex))
-
-    # print("Path list")
-    # print(len(path_list))
 
 
     ####################################
@@ -520,7 +344,7 @@ def create_cfg(filename):
     ####################################
 
     
-    print("entering here")
+    # print("entering here")
     pos_w=0
     max_path_weight_possible=0
     for i in weighted_edges:
@@ -751,7 +575,7 @@ def augmentor(p4_filename, json_filename):
     # print("\n\t path_weight: ")
     # print_details(path_weight)
  
-jsonfile = "/home/p4/Blink/p4_code/before-augment/main.json"
-p4filename = "/home/p4/Blink/p4_code/before-augment/main_before_aug.p4"
+jsonfile = "./main.json"
+p4filename = "./main_before_aug.p4"
 # p4filename = "./dot files/09-Traceroutable/traceroutable.p4"
 augmentor(p4filename, jsonfile)
